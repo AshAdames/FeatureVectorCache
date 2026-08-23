@@ -27,7 +27,7 @@ class KV{
             string val; 
             std::chrono::seconds TTL;
             chrono::steady_clock::time_point  expiration;
-            Node(string k, string value, std::chrono::seconds ttl): key(k), val(value), expiration(chrono::steady_clock::now() + TTL) {}
+            Node(string k, string value, std::chrono::seconds ttl): key(k), val(value), expiration(chrono::steady_clock::now() + ttl) {}
         }; 
 
         //hashmap + DLL (list) for O(1) lookup + O(1) LRU replacement

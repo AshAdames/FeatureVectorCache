@@ -49,6 +49,6 @@ TEST_F(KVTest, CapacityEviction) {
 
 TEST_F(KVTest, ExpiredValues){
     ASSERT_EQ(kv->SET("key1", "val1"), true);
-    std::this_thread::sleep_for(std::chrono::seconds(2)); // TTL was 1s
+    std::this_thread::sleep_for(std::chrono::seconds(4)); // TTL was 3s
     ASSERT_EQ(kv->GET("key1"), ""); // should be expired -> not found
 }

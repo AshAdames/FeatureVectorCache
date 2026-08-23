@@ -44,49 +44,41 @@ bool KV::SET(string key, string val){
     auto it = cache.find(key);
     // it-> first = key, it->second = val (node iters)
     if(it == cache.end()){//not in there insert:
-        if( cache.size() < capacity){//not at limit
-            Node * n = new Node(key, val, TTL);
-            valList.push_front(n);  //automatically at front 
-            cache[key] = valList.begin(); //adding iter to cache
-            return true; 
-        }else{
-            //at limit remove from back
+        if( cache.size() >= capacity){//evict at cap
+           //at limit remove from back
             Node * n = valList.back(); //get node from back
             valList.pop_back(); // remove from list
             cache.erase(n->key); //remove from cache
             delete n; 
-
-            //then insert again 
-            Node * n = new Node(key, val, TTL);
-            valList.push_front(n);  //automatically at front 
-            cache[key] = valList.begin(); //adding iter to cache
-            return true; 
         }
-        
-    }else{//exists 
-        //check expiration
-        Node * n = *it->second; 
-        if(std::chrono::steady_clock::now() > n->expiration){
-            //delete 
-            //delete from map
-            valList.erase(it->second); 
-            cache.erase(it);
-            delete n;
-            return false; //not inserted
-        }else{
-            //update 
-            //move to
-            n->val = val;
-            //erase from list 
-            n->expiration = chrono::steady_clock::now() - TTL;
-            valList.erase(it->second);
-            valList.push_front(n);
-            cache[key] = valList.begin();
-            return true;
+        //inserts
+        Node * n = new Node(key, val, TTL);
+        valList.push_front(n);  //automatically at front 
+        cache[key] = valList.begin(); //adding iter to cache
+        return true; 
         }
-    }  
+        //key already exists 
+    Node * n = *it->second; 
+    //check expiration
+    if(std::chrono::steady_clock::now() > n->expiration){
+        //delete 
+        //delete from map
+        valList.erase(it->second); 
+        cache.erase(it);
+        delete n;
+        return false; //not inserted
+    }
+    //update existing node
+    //move to
+    n->val = val;
+    //erase from list 
+    n->expiration = chrono::steady_clock::now() + TTL;
+    valList.erase(it->second);
+    valList.push_front(n);
+    cache[key] = valList.begin();
+    return true;
 }
-
+   
 //Get
 string KV::GET(string key){
     auto it = cache.find(key);

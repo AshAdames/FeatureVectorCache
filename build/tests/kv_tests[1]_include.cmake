@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/c/Users/Ashley/Documents/Code/kvStore/build/tests/kv_tests[1]_tests.cmake")
+  include("/mnt/c/Users/Ashley/Documents/Code/kvStore/build/tests/kv_tests[1]_tests.cmake")
+else()
+  add_test(kv_tests_NOT_BUILT kv_tests_NOT_BUILT)
+endif()
