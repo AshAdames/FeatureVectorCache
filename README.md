@@ -2,9 +2,12 @@
 Key Value store implementation 
 
 #Run Project
-g++ main.cpp -o kv_store
-./my_program
-
+mkdir build && cd build
+cmake ..
+make
+./tests/kv_tests
+# or
+ctest --output-on-failure
 
 #Run Tests 
 
