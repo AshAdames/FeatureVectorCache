@@ -1,5 +1,7 @@
 /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles/kv_lib.dir
 /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles/kv_server.dir
+/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles/KVStore.dir
+/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles/network.dir
 /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles/test.dir
 /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles/edit_cache.dir
 /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles/rebuild_cache.dir

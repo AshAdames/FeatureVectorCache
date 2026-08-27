@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnetwork.a CMakeFiles/network.dir/network/session.cpp.o
+/usr/bin/ranlib libnetwork.a

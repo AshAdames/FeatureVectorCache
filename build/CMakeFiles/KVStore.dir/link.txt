@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/KVStore.dir/main.cpp.o -o KVStore  libnetwork.a 

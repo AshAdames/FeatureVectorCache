@@ -198,6 +198,32 @@ kv_server/fast:
 .PHONY : kv_server/fast
 
 #=============================================================================
+# Target rules for targets named KVStore
+
+# Build rule for target.
+KVStore: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 KVStore
+.PHONY : KVStore
+
+# fast build rule for target.
+KVStore/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KVStore.dir/build.make CMakeFiles/KVStore.dir/build
+.PHONY : KVStore/fast
+
+#=============================================================================
+# Target rules for targets named network
+
+# Build rule for target.
+network: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 network
+.PHONY : network
+
+# fast build rule for target.
+network/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/network.dir/build.make CMakeFiles/network.dir/build
+.PHONY : network/fast
+
+#=============================================================================
 # Target rules for targets named kv_tests
 
 # Build rule for target.
@@ -292,6 +318,7 @@ main.o: main.cpp.o
 # target to build an object file
 main.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_server.dir/build.make CMakeFiles/kv_server.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KVStore.dir/build.make CMakeFiles/KVStore.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -300,6 +327,7 @@ main.i: main.cpp.i
 # target to preprocess a source file
 main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_server.dir/build.make CMakeFiles/kv_server.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KVStore.dir/build.make CMakeFiles/KVStore.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -308,6 +336,7 @@ main.s: main.cpp.s
 # target to generate assembly for a file
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_server.dir/build.make CMakeFiles/kv_server.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KVStore.dir/build.make CMakeFiles/KVStore.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -323,6 +352,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... KVStore"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
@@ -330,6 +360,7 @@ help:
 	@echo "... kv_lib"
 	@echo "... kv_server"
 	@echo "... kv_tests"
+	@echo "... network"
 	@echo "... kv.o"
 	@echo "... kv.i"
 	@echo "... kv.s"

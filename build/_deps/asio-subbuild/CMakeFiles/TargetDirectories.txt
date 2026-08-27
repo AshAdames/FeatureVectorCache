@@ -1,0 +1,3 @@
+/mnt/c/Users/Ashley/Documents/Code/kvStore/build/_deps/asio-subbuild/CMakeFiles/asio-populate.dir
+/mnt/c/Users/Ashley/Documents/Code/kvStore/build/_deps/asio-subbuild/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Ashley/Documents/Code/kvStore/build/_deps/asio-subbuild/CMakeFiles/rebuild_cache.dir
