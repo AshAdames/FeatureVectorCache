@@ -6,7 +6,7 @@ class KVTest : public ::testing::Test {
 protected:
     // runs before EACH test
     void SetUp() override {
-        kv = new KV(3, std::chrono::seconds(3)); // cap=3, ttl=1s
+        kv = new KV(3, 3); // cap=3, ttl=1s
     }
 
     // runs after EACH test

@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Build benchmark client
+BUILD_BENCH:BOOL=ON
+
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 

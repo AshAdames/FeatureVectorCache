@@ -1,5 +1,11 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/network.dir/network/session.cpp.o"
+  "CMakeFiles/network.dir/network/session.cpp.o.d"
+  "libnetwork.a"
+  "libnetwork.pdb"
+)
 
 # Per-language clean rules from dependency scanning.
-foreach(lang )
+foreach(lang CXX)
   include(CMakeFiles/network.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

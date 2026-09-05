@@ -1,7 +1,8 @@
 #include "kv.h"
+
 /* TODO TODAY
-networking layer
-basic unit tests 
+multithreading 
+
 
 */
 
@@ -19,31 +20,37 @@ Network + Protocol
 Concurrency 
 - initially with lock 
 - multithreaded 
-- lock free structure (?)
 
 Optimizations 
-- fragmentation
-- make own DLL and benchmark 
-Benchmarking
-- lock and lock free
-- ?
+- fragmentation?
+    - remove DLL
+- cache lines 
+- sharding 
+- minor upgrade over memcache (ML specific?)
 
-//make value agnostic 
+Benchmarking
+- lock vs sharding
+
+//make value agnostic ?
 */
 
+//Mutex where ? 
+// 
 
 //constructor 
-KV::KV(int cap, std::chrono::seconds ttl){
+KV::KV(int cap, int ttl){
     capacity = cap;
     //default ttl for entire KV, in secs
-    TTL = ttl;
+    TTL = std::chrono::seconds(ttl);
 }
 
 //Set
-bool KV::SET(string key, string val){ 
-    auto it = cache.find(key);
-    // it-> first = key, it->second = val (node iters)
-    if(it == cache.end()){//not in there insert:
+bool KV::SET(const string& key, const string& val){ 
+    std::lock_guard<std::mutex> lock(mtx);
+    if(key.empty()) return false; //cannot set empty key
+
+    auto it = cache.find(key);// it-> first = key, it->second = val (node iters)
+    if(it == cache.end()){//not in cache, lets insert 
         if( cache.size() >= capacity){//evict at cap
            //at limit remove from back
             Node * n = valList.back(); //get node from back
@@ -51,36 +58,37 @@ bool KV::SET(string key, string val){
             cache.erase(n->key); //remove from cache
             delete n; 
         }
-        //inserts
+     
+    }else{//key already exists 
+        Node * n = *it->second; 
+        //check expiration
+        if(std::chrono::steady_clock::now() > n->expiration){
+            //delete 
+            //delete from map
+            valList.erase(it->second); 
+            cache.erase(it);
+            delete n;
+        }else{
+            //update existing node
+             n->val = val;
+            //erase from list 
+            n->expiration = chrono::steady_clock::now() + TTL;
+            valList.erase(it->second);
+            valList.push_front(n);
+            it->second = valList.begin();
+            return true;
+        }
+    }
+        //inserts a new if expired and if not in cache +cap allows
         Node * n = new Node(key, val, TTL);
         valList.push_front(n);  //automatically at front 
         cache[key] = valList.begin(); //adding iter to cache
         return true; 
-        }
-        //key already exists 
-    Node * n = *it->second; 
-    //check expiration
-    if(std::chrono::steady_clock::now() > n->expiration){
-        //delete 
-        //delete from map
-        valList.erase(it->second); 
-        cache.erase(it);
-        delete n;
-        return false; //not inserted
-    }
-    //update existing node
-    //move to
-    n->val = val;
-    //erase from list 
-    n->expiration = chrono::steady_clock::now() + TTL;
-    valList.erase(it->second);
-    valList.push_front(n);
-    cache[key] = valList.begin();
-    return true;
 }
    
 //Get
-string KV::GET(string key){
+string KV::GET(const string& key){
+    std::lock_guard<std::mutex> lock(mtx); 
     auto it = cache.find(key);
     if(it != cache.end()){//found 
         //lazy expire check
@@ -105,7 +113,8 @@ string KV::GET(string key){
 }
 
 //del
-bool KV::DEL(string key){
+bool KV::DEL(const string& key){
+    std::lock_guard<std::mutex> lock(mtx);
     auto it = cache.find(key); 
         //it : first = key, second = list iter
     if(it != cache.end()){//exists
