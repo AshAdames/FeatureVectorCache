@@ -1,24 +1,26 @@
 #pragma once 
 #include <iostream> 
 #include <unordered_map> 
-#include<string> 
+#include <string> 
 #include <vector> 
 #include <chrono>
 #include <list> 
 #include <mutex>
 #include <shared_mutex>
-
-using namespace std; 
+#include <cmath>
+#include <algorithm>
+#include <optional>
 
 
 class KV_OPT{ 
 
     public:
-        KV_OPT(int cap, int ttl);
-        bool SET(const int& key, const float& val);
-        string GET(const int& key);
+        KV_OPT(int cap, int ttl, size_t dim);
+        bool SET(const int& key, const std::vector<float>& vec);
+        std::vector<float> GET(const int& key);
         bool DEL(const int& key);
-        float KV_OPT::SIMILARITY(int key1, int key2);
+        std::optional<float> SIMILARITY(int key1, int key2);
+        std::vector<std::pair<int, float> TOPK(int query_key, int k);
         ~KV_OPT();
         KV_OPT(const KV_OPT&) = delete;
         KV_OPT& operator=(const KV_OPT&) = delete;
@@ -30,8 +32,8 @@ class KV_OPT{
             int key;
             int prev = -1; 
             int next = -1; 
-            chrono::steady_clock::time_point  expiration;
-            Node(int k, std::chrono::seconds ttl): key(k), expiration(chrono::steady_clock::now() + ttl) {}
+            std::chrono::steady_clock::time_point  expiration;
+            Node(int k, std::chrono::seconds ttl): key(k), expiration(std::chrono::steady_clock::now() + ttl) {}
         }; 
 
         //hashmap + list for O(1) lookup + O(1) LRU replacement
@@ -51,4 +53,5 @@ class KV_OPT{
         std::vector<int> freeSlots;
         std::chrono::seconds TTL;
         mutable std::mutex mtx;
+
 };
