@@ -17,3 +17,9 @@ make
 
 
 
+# Main use of AI
+- to generate benchmarking client 
+- CMakeLists.txt generation
+
+
+

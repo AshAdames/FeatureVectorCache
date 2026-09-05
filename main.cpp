@@ -20,6 +20,7 @@ int main(int argc, char** argv){
         threadCount = std::stoi(argv[1]);
         if(threadCount < 0){
             std::cerr <<"thread count must be >= 1 \n";
+            return 1;
         }
     }
     io_context io;
