@@ -185,6 +185,19 @@ kv_lib/fast:
 .PHONY : kv_lib/fast
 
 #=============================================================================
+# Target rules for targets named network
+
+# Build rule for target.
+network: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 network
+.PHONY : network
+
+# fast build rule for target.
+network/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/network.dir/build.make CMakeFiles/network.dir/build
+.PHONY : network/fast
+
+#=============================================================================
 # Target rules for targets named kv_server
 
 # Build rule for target.
@@ -196,6 +209,19 @@ kv_server: cmake_check_build_system
 kv_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_server.dir/build.make CMakeFiles/kv_server.dir/build
 .PHONY : kv_server/fast
+
+#=============================================================================
+# Target rules for targets named bench_client
+
+# Build rule for target.
+bench_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_client
+.PHONY : bench_client
+
+# fast build rule for target.
+bench_client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/build
+.PHONY : bench_client/fast
 
 #=============================================================================
 # Target rules for targets named kv_tests
@@ -262,29 +288,53 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-kv.o: kv.cpp.o
-.PHONY : kv.o
+benchmarks/bench_feat_client.o: benchmarks/bench_feat_client.cpp.o
+.PHONY : benchmarks/bench_feat_client.o
 
 # target to build an object file
-kv.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv.cpp.o
-.PHONY : kv.cpp.o
+benchmarks/bench_feat_client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o
+.PHONY : benchmarks/bench_feat_client.cpp.o
 
-kv.i: kv.cpp.i
-.PHONY : kv.i
+benchmarks/bench_feat_client.i: benchmarks/bench_feat_client.cpp.i
+.PHONY : benchmarks/bench_feat_client.i
 
 # target to preprocess a source file
-kv.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv.cpp.i
-.PHONY : kv.cpp.i
+benchmarks/bench_feat_client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.i
+.PHONY : benchmarks/bench_feat_client.cpp.i
 
-kv.s: kv.cpp.s
-.PHONY : kv.s
+benchmarks/bench_feat_client.s: benchmarks/bench_feat_client.cpp.s
+.PHONY : benchmarks/bench_feat_client.s
 
 # target to generate assembly for a file
-kv.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv.cpp.s
-.PHONY : kv.cpp.s
+benchmarks/bench_feat_client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.s
+.PHONY : benchmarks/bench_feat_client.cpp.s
+
+kv_opt.o: kv_opt.cpp.o
+.PHONY : kv_opt.o
+
+# target to build an object file
+kv_opt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv_opt.cpp.o
+.PHONY : kv_opt.cpp.o
+
+kv_opt.i: kv_opt.cpp.i
+.PHONY : kv_opt.i
+
+# target to preprocess a source file
+kv_opt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv_opt.cpp.i
+.PHONY : kv_opt.cpp.i
+
+kv_opt.s: kv_opt.cpp.s
+.PHONY : kv_opt.s
+
+# target to generate assembly for a file
+kv_opt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv_opt.cpp.s
+.PHONY : kv_opt.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -310,6 +360,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_server.dir/build.make CMakeFiles/kv_server.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+network/session.o: network/session.cpp.o
+.PHONY : network/session.o
+
+# target to build an object file
+network/session.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/network.dir/build.make CMakeFiles/network.dir/network/session.cpp.o
+.PHONY : network/session.cpp.o
+
+network/session.i: network/session.cpp.i
+.PHONY : network/session.i
+
+# target to preprocess a source file
+network/session.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/network.dir/build.make CMakeFiles/network.dir/network/session.cpp.i
+.PHONY : network/session.cpp.i
+
+network/session.s: network/session.cpp.s
+.PHONY : network/session.s
+
+# target to generate assembly for a file
+network/session.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/network.dir/build.make CMakeFiles/network.dir/network/session.cpp.s
+.PHONY : network/session.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -323,6 +397,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... bench_client"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
@@ -330,12 +405,19 @@ help:
 	@echo "... kv_lib"
 	@echo "... kv_server"
 	@echo "... kv_tests"
-	@echo "... kv.o"
-	@echo "... kv.i"
-	@echo "... kv.s"
+	@echo "... network"
+	@echo "... benchmarks/bench_feat_client.o"
+	@echo "... benchmarks/bench_feat_client.i"
+	@echo "... benchmarks/bench_feat_client.s"
+	@echo "... kv_opt.o"
+	@echo "... kv_opt.i"
+	@echo "... kv_opt.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... network/session.o"
+	@echo "... network/session.i"
+	@echo "... network/session.s"
 .PHONY : help
 
 

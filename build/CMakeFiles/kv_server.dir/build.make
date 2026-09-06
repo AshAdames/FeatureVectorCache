@@ -93,6 +93,7 @@ kv_server_EXTERNAL_OBJECTS =
 kv_server: CMakeFiles/kv_server.dir/main.cpp.o
 kv_server: CMakeFiles/kv_server.dir/build.make
 kv_server: libkv_lib.a
+kv_server: libnetwork.a
 kv_server: CMakeFiles/kv_server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable kv_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kv_server.dir/link.txt --verbose=$(VERBOSE)

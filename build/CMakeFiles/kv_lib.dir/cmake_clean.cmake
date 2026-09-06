@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/kv_lib.dir/kv.cpp.o"
-  "CMakeFiles/kv_lib.dir/kv.cpp.o.d"
+  "CMakeFiles/kv_lib.dir/kv_opt.cpp.o"
+  "CMakeFiles/kv_lib.dir/kv_opt.cpp.o.d"
   "libkv_lib.a"
   "libkv_lib.pdb"
 )

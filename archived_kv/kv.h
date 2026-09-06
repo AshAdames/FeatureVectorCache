@@ -5,6 +5,8 @@
 #include <vector> 
 #include <chrono>
 #include <list> 
+#include <mutex>
+#include <shared_mutex>
 
 using namespace std; 
 
@@ -12,10 +14,10 @@ using namespace std;
 class KV{ 
 
     public:
-        KV(int cap, std::chrono::seconds ttl);
-        bool SET(string key, string val);
-        string GET(string key);
-        bool DEL(string key);
+        KV(int cap, int ttl);
+        bool SET(const string& key, const string& val);
+        string GET(const string& key);
+        bool DEL(const string& key);
         ~KV();
         KV(const KV&) = delete;
         KV& operator=(const KV&) = delete;
@@ -35,4 +37,6 @@ class KV{
         list<Node *> valList; 
         size_t capacity; 
         std::chrono::seconds TTL;
+        mutable std::shared_mutex sh_mtx;
+        mutable std::mutex mtx;
 };

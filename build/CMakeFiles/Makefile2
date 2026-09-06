@@ -64,7 +64,9 @@ CMAKE_BINARY_DIR = /mnt/c/Users/Ashley/Documents/Code/kvStore/build
 
 # The main recursive "all" target.
 all: CMakeFiles/kv_lib.dir/all
+all: CMakeFiles/network.dir/all
 all: CMakeFiles/kv_server.dir/all
+all: CMakeFiles/bench_client.dir/all
 all: tests/all
 .PHONY : all
 
@@ -74,7 +76,9 @@ preinstall: tests/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/kv_lib.dir/clean
+clean: CMakeFiles/network.dir/clean
 clean: CMakeFiles/kv_server.dir/clean
+clean: CMakeFiles/bench_client.dir/clean
 clean: tests/clean
 .PHONY : clean
 
@@ -153,7 +157,7 @@ tests/clean: _deps/googletest-build/clean
 CMakeFiles/kv_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=9,10 "Built target kv_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=11,12 "Built target kv_lib"
 .PHONY : CMakeFiles/kv_lib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -173,18 +177,45 @@ CMakeFiles/kv_lib.dir/clean:
 .PHONY : CMakeFiles/kv_lib.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/network.dir
+
+# All Build rule for target.
+CMakeFiles/network.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/network.dir/build.make CMakeFiles/network.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/network.dir/build.make CMakeFiles/network.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=17,18 "Built target network"
+.PHONY : CMakeFiles/network.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/network.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/network.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles 0
+.PHONY : CMakeFiles/network.dir/rule
+
+# Convenience name for target.
+network: CMakeFiles/network.dir/rule
+.PHONY : network
+
+# clean rule for target.
+CMakeFiles/network.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/network.dir/build.make CMakeFiles/network.dir/clean
+.PHONY : CMakeFiles/network.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/kv_server.dir
 
 # All Build rule for target.
 CMakeFiles/kv_server.dir/all: CMakeFiles/kv_lib.dir/all
+CMakeFiles/kv_server.dir/all: CMakeFiles/network.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_server.dir/build.make CMakeFiles/kv_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_server.dir/build.make CMakeFiles/kv_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=11,12 "Built target kv_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=13,14 "Built target kv_server"
 .PHONY : CMakeFiles/kv_server.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/kv_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/kv_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles 0
 .PHONY : CMakeFiles/kv_server.dir/rule
@@ -199,6 +230,32 @@ CMakeFiles/kv_server.dir/clean:
 .PHONY : CMakeFiles/kv_server.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/bench_client.dir
+
+# All Build rule for target.
+CMakeFiles/bench_client.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=1,2 "Built target bench_client"
+.PHONY : CMakeFiles/bench_client.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/bench_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bench_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles 0
+.PHONY : CMakeFiles/bench_client.dir/rule
+
+# Convenience name for target.
+bench_client: CMakeFiles/bench_client.dir/rule
+.PHONY : bench_client
+
+# clean rule for target.
+CMakeFiles/bench_client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/clean
+.PHONY : CMakeFiles/bench_client.dir/clean
+
+#=============================================================================
 # Target rules for target tests/CMakeFiles/kv_tests.dir
 
 # All Build rule for target.
@@ -207,7 +264,7 @@ tests/CMakeFiles/kv_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/
 tests/CMakeFiles/kv_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/kv_tests.dir/build.make tests/CMakeFiles/kv_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/kv_tests.dir/build.make tests/CMakeFiles/kv_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=13,14 "Built target kv_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=15,16 "Built target kv_tests"
 .PHONY : tests/CMakeFiles/kv_tests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -233,7 +290,7 @@ tests/CMakeFiles/kv_tests.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=1,2 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=3,4 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -260,7 +317,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=3,4 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -286,7 +343,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=5,6 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=7,8 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -312,7 +369,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=7,8 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
