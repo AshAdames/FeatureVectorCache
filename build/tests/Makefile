@@ -185,6 +185,20 @@ kv_tests/fast:
 	cd /mnt/c/Users/Ashley/Documents/Code/kvStore/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/kv_tests.dir/build.make tests/CMakeFiles/kv_tests.dir/build
 .PHONY : kv_tests/fast
 
+# Convenience name for target.
+tests/CMakeFiles/kv_tests_128.dir/rule:
+	cd /mnt/c/Users/Ashley/Documents/Code/kvStore/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/kv_tests_128.dir/rule
+.PHONY : tests/CMakeFiles/kv_tests_128.dir/rule
+
+# Convenience name for target.
+kv_tests_128: tests/CMakeFiles/kv_tests_128.dir/rule
+.PHONY : kv_tests_128
+
+# fast build rule for target.
+kv_tests_128/fast:
+	cd /mnt/c/Users/Ashley/Documents/Code/kvStore/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/kv_tests_128.dir/build.make tests/CMakeFiles/kv_tests_128.dir/build
+.PHONY : kv_tests_128/fast
+
 kv_test.o: kv_test.cpp.o
 .PHONY : kv_test.o
 
@@ -209,6 +223,30 @@ kv_test.cpp.s:
 	cd /mnt/c/Users/Ashley/Documents/Code/kvStore/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/kv_tests.dir/build.make tests/CMakeFiles/kv_tests.dir/kv_test.cpp.s
 .PHONY : kv_test.cpp.s
 
+kv_test_128.o: kv_test_128.cpp.o
+.PHONY : kv_test_128.o
+
+# target to build an object file
+kv_test_128.cpp.o:
+	cd /mnt/c/Users/Ashley/Documents/Code/kvStore/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/kv_tests_128.dir/build.make tests/CMakeFiles/kv_tests_128.dir/kv_test_128.cpp.o
+.PHONY : kv_test_128.cpp.o
+
+kv_test_128.i: kv_test_128.cpp.i
+.PHONY : kv_test_128.i
+
+# target to preprocess a source file
+kv_test_128.cpp.i:
+	cd /mnt/c/Users/Ashley/Documents/Code/kvStore/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/kv_tests_128.dir/build.make tests/CMakeFiles/kv_tests_128.dir/kv_test_128.cpp.i
+.PHONY : kv_test_128.cpp.i
+
+kv_test_128.s: kv_test_128.cpp.s
+.PHONY : kv_test_128.s
+
+# target to generate assembly for a file
+kv_test_128.cpp.s:
+	cd /mnt/c/Users/Ashley/Documents/Code/kvStore/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/kv_tests_128.dir/build.make tests/CMakeFiles/kv_tests_128.dir/kv_test_128.cpp.s
+.PHONY : kv_test_128.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -223,9 +261,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... kv_tests"
+	@echo "... kv_tests_128"
 	@echo "... kv_test.o"
 	@echo "... kv_test.i"
 	@echo "... kv_test.s"
+	@echo "... kv_test_128.o"
+	@echo "... kv_test_128.i"
+	@echo "... kv_test_128.s"
 .PHONY : help
 
 

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/mnt/c/Users/Ashley/Documents/Code/kvStore
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = -std=gnu++17 -mavx2 -mfma
 
