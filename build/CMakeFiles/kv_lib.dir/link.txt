@@ -1,2 +1,2 @@
-/usr/bin/ar qc libkv_lib.a CMakeFiles/kv_lib.dir/kv.cpp.o
+/usr/bin/ar qc libkv_lib.a CMakeFiles/kv_lib.dir/kv_opt.cpp.o
 /usr/bin/ranlib libkv_lib.a

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o"
-  "CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o.d"
+  "CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o"
+  "CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o.d"
   "bench_client"
   "bench_client.pdb"
 )

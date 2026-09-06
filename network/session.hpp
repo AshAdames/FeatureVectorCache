@@ -7,7 +7,6 @@
 #include <array>
 #include <utility>
 #include <vector>
-#include "kv.h"
 #include "kv_opt.h"
 using namespace asio;
 using asio::ip::tcp;
@@ -16,43 +15,47 @@ using asio::ip::tcp;
 
 class Session : public std::enable_shared_from_this<Session>{
 public:
-    Session(tcp::socket socket, KV &key_store);
-    //session for feat_vec
-    Session(tcp::socket socket, KV_OPT &key_vec_store);
+    Session(tcp::socket socket, KV_OPT &feat_store);
 
     void start();
     ~Session();
 private:
     tcp::socket socket_;
-    asio::streambuf read_buf_;
     asio::streambuf read_vec_;
-    KV &key_store_;
     KV_OPT &feat_store_;
 
-    void do_write(std::string msg);
-    void do_read();
-    std::string handle_command(const std::string& line); 
 
     //protocols for feature vector kv
+    /*
+        cmd:
+        0 = GET
+        1 = SET
+        2 = DEL
+        3 = SIMILARITY
+        4 = TOPK
+    */
+
+    //TODO rename and refactor
     struct msg_header{
-        string cmd; 
+        int cmd; 
         int key;
         int key2 = -1; 
+        int k; 
         int payload_len; 
     };
 
     struct response {
         msg_header hdr;              // status/cmd echo + payload_len
         std::vector<float> payload; // empty if none
-        optional<float> sim;
+        std::optional<float> sim;
+        std::vector<std::pair<int, float>> sim_scores;
         bool status;
     };
 
-    void do_write_vec(response resp); 
-    void do_read_vec();
-    response handle_command_vec(msg_header &payload_hdr, const std::vector<float> &payload);
+    void do_write(response resp); 
+    void do_read();
+    response handle_command(msg_header &payload_hdr, const std::vector<float> &payload);
     msg_header incoming_hdr_;
-    response resp;
     std::vector<float> incoming_vec_;
 
 };

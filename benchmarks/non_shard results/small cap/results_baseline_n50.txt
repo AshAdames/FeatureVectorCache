@@ -8,10 +8,10 @@ workload          = mixed
 === Results ===
 total ops completed : 50000
 errors               : 0
-wall time (s)        : 0.96813
-throughput (ops/sec) : 51646
-p50 latency (us)     : 846.88
-p95 latency (us)     : 1583.83
-p99 latency (us)     : 2097.73
-p999 latency (us)    : 5410.77
-max latency (us)     : 13240.18
+wall time (s)        : 0.443948
+throughput (ops/sec) : 112626
+p50 latency (us)     : 307.06
+p95 latency (us)     : 686.87
+p99 latency (us)     : 1387.34
+p999 latency (us)    : 2843.54
+max latency (us)     : 5120.52

@@ -20,7 +20,7 @@ class KV_OPT{
         std::vector<float> GET(const int& key);
         bool DEL(const int& key);
         std::optional<float> SIMILARITY(int key1, int key2);
-        std::vector<std::pair<int, float> TOPK(int query_key, int k);
+        std::vector<std::pair<int, float>> TOPK(int query_key, int k);
         ~KV_OPT();
         KV_OPT(const KV_OPT&) = delete;
         KV_OPT& operator=(const KV_OPT&) = delete;
@@ -33,12 +33,11 @@ class KV_OPT{
             int prev = -1; 
             int next = -1; 
             std::chrono::steady_clock::time_point  expiration;
-            Node(int k, std::chrono::seconds ttl): key(k), expiration(std::chrono::steady_clock::now() + ttl) {}
-        }; 
+        };
 
         //hashmap + list for O(1) lookup + O(1) LRU replacement
         //cache =which slot, arena = data in that slot
-        unordered_map<int, int> cache; //k: key | val: clot into pool/arena
+        std::unordered_map<int, int> cache; //k: key | val: clot into pool/arena
         std::vector<Node> pool; // stores nodes 
         std::vector<float> arena; // continguous memory of dim * cap with only the raw float data 
             //arena provides cache locality and use for SIMD 
@@ -48,8 +47,8 @@ class KV_OPT{
         int head = -1;
         int tail = -1;
         //helper functions for adding/removing to linked list
-        void KV_OPT::unlink(int i);
-        void KV_OPT::push_front(int i);
+        void unlink(int i);
+        void push_front(int i);
         std::vector<int> freeSlots;
         std::chrono::seconds TTL;
         mutable std::mutex mtx;

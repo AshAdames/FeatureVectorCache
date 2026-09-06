@@ -288,53 +288,53 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-benchmarks/bench_client.o: benchmarks/bench_client.cpp.o
-.PHONY : benchmarks/bench_client.o
+benchmarks/bench_feat_client.o: benchmarks/bench_feat_client.cpp.o
+.PHONY : benchmarks/bench_feat_client.o
 
 # target to build an object file
-benchmarks/bench_client.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o
-.PHONY : benchmarks/bench_client.cpp.o
+benchmarks/bench_feat_client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o
+.PHONY : benchmarks/bench_feat_client.cpp.o
 
-benchmarks/bench_client.i: benchmarks/bench_client.cpp.i
-.PHONY : benchmarks/bench_client.i
+benchmarks/bench_feat_client.i: benchmarks/bench_feat_client.cpp.i
+.PHONY : benchmarks/bench_feat_client.i
 
 # target to preprocess a source file
-benchmarks/bench_client.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.i
-.PHONY : benchmarks/bench_client.cpp.i
+benchmarks/bench_feat_client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.i
+.PHONY : benchmarks/bench_feat_client.cpp.i
 
-benchmarks/bench_client.s: benchmarks/bench_client.cpp.s
-.PHONY : benchmarks/bench_client.s
+benchmarks/bench_feat_client.s: benchmarks/bench_feat_client.cpp.s
+.PHONY : benchmarks/bench_feat_client.s
 
 # target to generate assembly for a file
-benchmarks/bench_client.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.s
-.PHONY : benchmarks/bench_client.cpp.s
+benchmarks/bench_feat_client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_client.dir/build.make CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.s
+.PHONY : benchmarks/bench_feat_client.cpp.s
 
-kv.o: kv.cpp.o
-.PHONY : kv.o
+kv_opt.o: kv_opt.cpp.o
+.PHONY : kv_opt.o
 
 # target to build an object file
-kv.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv.cpp.o
-.PHONY : kv.cpp.o
+kv_opt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv_opt.cpp.o
+.PHONY : kv_opt.cpp.o
 
-kv.i: kv.cpp.i
-.PHONY : kv.i
+kv_opt.i: kv_opt.cpp.i
+.PHONY : kv_opt.i
 
 # target to preprocess a source file
-kv.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv.cpp.i
-.PHONY : kv.cpp.i
+kv_opt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv_opt.cpp.i
+.PHONY : kv_opt.cpp.i
 
-kv.s: kv.cpp.s
-.PHONY : kv.s
+kv_opt.s: kv_opt.cpp.s
+.PHONY : kv_opt.s
 
 # target to generate assembly for a file
-kv.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv.cpp.s
-.PHONY : kv.cpp.s
+kv_opt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kv_lib.dir/build.make CMakeFiles/kv_lib.dir/kv_opt.cpp.s
+.PHONY : kv_opt.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -406,12 +406,12 @@ help:
 	@echo "... kv_server"
 	@echo "... kv_tests"
 	@echo "... network"
-	@echo "... benchmarks/bench_client.o"
-	@echo "... benchmarks/bench_client.i"
-	@echo "... benchmarks/bench_client.s"
-	@echo "... kv.o"
-	@echo "... kv.i"
-	@echo "... kv.s"
+	@echo "... benchmarks/bench_feat_client.o"
+	@echo "... benchmarks/bench_feat_client.i"
+	@echo "... benchmarks/bench_feat_client.s"
+	@echo "... kv_opt.o"
+	@echo "... kv_opt.i"
+	@echo "... kv_opt.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

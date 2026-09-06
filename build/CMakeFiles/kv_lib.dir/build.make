@@ -69,28 +69,28 @@ include CMakeFiles/kv_lib.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/kv_lib.dir/flags.make
 
-CMakeFiles/kv_lib.dir/kv.cpp.o: CMakeFiles/kv_lib.dir/flags.make
-CMakeFiles/kv_lib.dir/kv.cpp.o: /mnt/c/Users/Ashley/Documents/Code/kvStore/kv.cpp
-CMakeFiles/kv_lib.dir/kv.cpp.o: CMakeFiles/kv_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/kv_lib.dir/kv.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kv_lib.dir/kv.cpp.o -MF CMakeFiles/kv_lib.dir/kv.cpp.o.d -o CMakeFiles/kv_lib.dir/kv.cpp.o -c /mnt/c/Users/Ashley/Documents/Code/kvStore/kv.cpp
+CMakeFiles/kv_lib.dir/kv_opt.cpp.o: CMakeFiles/kv_lib.dir/flags.make
+CMakeFiles/kv_lib.dir/kv_opt.cpp.o: /mnt/c/Users/Ashley/Documents/Code/kvStore/kv_opt.cpp
+CMakeFiles/kv_lib.dir/kv_opt.cpp.o: CMakeFiles/kv_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/kv_lib.dir/kv_opt.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kv_lib.dir/kv_opt.cpp.o -MF CMakeFiles/kv_lib.dir/kv_opt.cpp.o.d -o CMakeFiles/kv_lib.dir/kv_opt.cpp.o -c /mnt/c/Users/Ashley/Documents/Code/kvStore/kv_opt.cpp
 
-CMakeFiles/kv_lib.dir/kv.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/kv_lib.dir/kv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Ashley/Documents/Code/kvStore/kv.cpp > CMakeFiles/kv_lib.dir/kv.cpp.i
+CMakeFiles/kv_lib.dir/kv_opt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/kv_lib.dir/kv_opt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Ashley/Documents/Code/kvStore/kv_opt.cpp > CMakeFiles/kv_lib.dir/kv_opt.cpp.i
 
-CMakeFiles/kv_lib.dir/kv.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kv_lib.dir/kv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Ashley/Documents/Code/kvStore/kv.cpp -o CMakeFiles/kv_lib.dir/kv.cpp.s
+CMakeFiles/kv_lib.dir/kv_opt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kv_lib.dir/kv_opt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Ashley/Documents/Code/kvStore/kv_opt.cpp -o CMakeFiles/kv_lib.dir/kv_opt.cpp.s
 
 # Object files for target kv_lib
 kv_lib_OBJECTS = \
-"CMakeFiles/kv_lib.dir/kv.cpp.o"
+"CMakeFiles/kv_lib.dir/kv_opt.cpp.o"
 
 # External object files for target kv_lib
 kv_lib_EXTERNAL_OBJECTS =
 
-libkv_lib.a: CMakeFiles/kv_lib.dir/kv.cpp.o
+libkv_lib.a: CMakeFiles/kv_lib.dir/kv_opt.cpp.o
 libkv_lib.a: CMakeFiles/kv_lib.dir/build.make
 libkv_lib.a: CMakeFiles/kv_lib.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libkv_lib.a"

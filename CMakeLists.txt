@@ -20,7 +20,7 @@ FetchContent_MakeAvailable(asio)
 # Core KV library
 
 add_library(kv_lib
-    kv.cpp
+    kv_opt.cpp
 )
 
 target_include_directories(kv_lib
@@ -72,7 +72,7 @@ target_link_libraries(network
 option(BUILD_BENCH "Build benchmark client" ON)
 
 if(BUILD_BENCH)
-    add_executable(bench_client benchmarks/bench_client.cpp)
+    add_executable(bench_client benchmarks/bench_feat_client.cpp)
     target_include_directories(bench_client
         PRIVATE
             ${asio_SOURCE_DIR}/asio/include

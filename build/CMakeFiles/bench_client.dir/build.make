@@ -69,28 +69,28 @@ include CMakeFiles/bench_client.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/bench_client.dir/flags.make
 
-CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o: CMakeFiles/bench_client.dir/flags.make
-CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o: /mnt/c/Users/Ashley/Documents/Code/kvStore/benchmarks/bench_client.cpp
-CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o: CMakeFiles/bench_client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o -MF CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o.d -o CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o -c /mnt/c/Users/Ashley/Documents/Code/kvStore/benchmarks/bench_client.cpp
+CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o: CMakeFiles/bench_client.dir/flags.make
+CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o: /mnt/c/Users/Ashley/Documents/Code/kvStore/benchmarks/bench_feat_client.cpp
+CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o: CMakeFiles/bench_client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o -MF CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o.d -o CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o -c /mnt/c/Users/Ashley/Documents/Code/kvStore/benchmarks/bench_feat_client.cpp
 
-CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Ashley/Documents/Code/kvStore/benchmarks/bench_client.cpp > CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.i
+CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Ashley/Documents/Code/kvStore/benchmarks/bench_feat_client.cpp > CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.i
 
-CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Ashley/Documents/Code/kvStore/benchmarks/bench_client.cpp -o CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.s
+CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Ashley/Documents/Code/kvStore/benchmarks/bench_feat_client.cpp -o CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.s
 
 # Object files for target bench_client
 bench_client_OBJECTS = \
-"CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o"
+"CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o"
 
 # External object files for target bench_client
 bench_client_EXTERNAL_OBJECTS =
 
-bench_client: CMakeFiles/bench_client.dir/benchmarks/bench_client.cpp.o
+bench_client: CMakeFiles/bench_client.dir/benchmarks/bench_feat_client.cpp.o
 bench_client: CMakeFiles/bench_client.dir/build.make
 bench_client: CMakeFiles/bench_client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/Ashley/Documents/Code/kvStore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bench_client"

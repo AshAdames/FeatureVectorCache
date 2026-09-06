@@ -26,8 +26,8 @@ void KV_OPT::unlink(int i){
         pool[pool[i].prev].next = pool[i].next; //unlink it 
     }
     else{  //found head, no prev
-        head = pool[i].prev
-    }; //head = -1
+        head = pool[i].next;
+    } //head = -1
     
     if(pool[i].next != -1) {
         pool[pool[i].next].prev = pool[i].prev; //unlink
@@ -45,21 +45,25 @@ void KV_OPT::unlink(int i){
 void KV_OPT::push_front(int i){
     pool[i].prev = -1; 
     pool[i].next = head; 
-    if(head != 01) pool[head].prev = i; 
+    if(head != -1) 
+        pool[head].prev = i; 
     head = i; 
-    if(tail == -1) tail = i; //empty list 
+    if(tail == -1) 
+        tail = i; //empty list 
 }
 
 
 //constructor 
 KV_OPT::KV_OPT(int cap, int ttl, size_t dim){
     capacity = cap;
-    dim = dim;
+    this->dim = dim;
+    arena.resize(cap*dim);
+    pool.resize(cap);
     //default ttl for entire KV_OPT, in secs
     TTL = std::chrono::seconds(ttl);
 
     //push index onto freeSlots 
-    freeSlots.reserve(capacity); 
+    freeSlots.resize(capacity); 
     for(int i = 0; i < capacity; ++i){
         freeSlots[i] = i; 
     }
@@ -157,7 +161,7 @@ std::optional<float> KV_OPT::SIMILARITY(int key1, int key2){
         for(int i = 0; i < dim; ++i){
             dot_product += a[i] * b[i];
             mag1 += a[i]*a[i]; 
-            mag2 += a[i]*a[i]; 
+            mag2 += b[i]*b[i]; 
         }
     //magnitude sqrt
     mag1 = std::sqrt(mag1);
@@ -193,8 +197,8 @@ std::vector<std::pair<int, float>> KV_OPT::TOPK(int query_key, int k){//get keys
     for(const auto& [key, idx] : cache){
         if(key == query_key) continue; 
 
-        const float * vec = arena[idx * dim]; 
-        float dot_product, mag_v = 0.0f;
+        const float * vec = &arena[idx * dim]; 
+        float dot_product = 0.0f, mag_v = 0.0f;
          for(int i = 0; i < dim; ++i){
             dot_product += query_vec[i] * vec[i];
             mag_v += vec[i]*vec[i]; 
