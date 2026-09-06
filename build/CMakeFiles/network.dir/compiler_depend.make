@@ -580,6 +580,7 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
   /usr/include/c++/13/shared_mutex \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
+  /usr/include/c++/13/stdlib.h \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
@@ -812,16 +813,202 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
   /usr/include/x86_64-linux-gnu/sys/ucontext.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/sys/un.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cmpccxaddintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/keylockerintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/lzcntintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/smmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xtestintrin.h
 
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveoptintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/wmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/vaesintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/tmmintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/sgxintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/raointintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/prfchwintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/prfchiintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/pconfigintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/movdirintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/keylockerintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/ia32intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/hresetintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/gfniintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/fmaintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/cmpccxaddintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clzerointrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/cetintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/bmiintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/bmi2intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniint8intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxneconvertintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqvlintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectvlintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnniintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vldqintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlbwintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmiintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmavlintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512erintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512cdintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bitalgintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124vnniwintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124fmapsintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxfp16intrin.h:
 
 /usr/include/x86_64-linux-gnu/sys/un.h:
 
@@ -843,6 +1030,8 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxifmaintrin.h:
+
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
@@ -851,7 +1040,13 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/tbmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/pkuintrin.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clwbintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h:
 
@@ -877,11 +1072,15 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512dqintrin.h:
+
 /usr/include/x86_64-linux-gnu/bits/timerfd.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/shaintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
 
@@ -903,15 +1102,21 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/bits/statx.h:
 
 /usr/include/x86_64-linux-gnu/bits/ss_flags.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmivlintrin.h:
+
 /usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigstack.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/signum-generic.h:
 
@@ -943,6 +1148,8 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/waitpkgintrin.h:
+
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/socket.h:
@@ -960,6 +1167,8 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 /usr/include/x86_64-linux-gnu/bits/ioctls.h:
 
 /usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/popcntintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
@@ -1025,6 +1234,8 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 
 /usr/include/pthread.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xtestintrin.h:
+
 /usr/include/sched.h:
 
 /usr/include/netdb.h:
@@ -1036,6 +1247,8 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 /usr/include/locale.h:
 
 /usr/include/linux/version.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlintrin.h:
 
 /usr/include/linux/types.h:
 
@@ -1058,6 +1271,8 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 /usr/include/c++/13/version:
 
 /usr/include/c++/13/vector:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/uintrintrin.h:
 
 /usr/include/c++/13/utility:
 
@@ -1095,6 +1310,8 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 
 /usr/include/c++/13/tr1/beta_function.tcc:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h:
+
 /usr/include/c++/13/tr1/bessel_function.tcc:
 
 /usr/include/c++/13/string_view:
@@ -1103,7 +1320,13 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 
 /usr/include/c++/13/string:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xsavecintrin.h:
+
 /usr/include/c++/13/streambuf:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxbf16intrin.h:
+
+/usr/include/c++/13/stdlib.h:
 
 /usr/include/c++/13/optional:
 
@@ -1169,6 +1392,12 @@ CMakeFiles/network.dir/network/session.cpp.o: /mnt/c/Users/Ashley/Documents/Code
 
 /usr/include/c++/13/cstdlib:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16vlintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/adxintrin.h:
+
 _deps/asio-src/asio/include/asio/impl/buffered_read_stream.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
@@ -1189,6 +1418,8 @@ _deps/asio-src/asio/include/asio/posix/basic_descriptor.hpp:
 
 /usr/include/c++/13/bits/locale_classes.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xsavesintrin.h:
+
 _deps/asio-src/asio/include/asio/execution/relationship.hpp:
 
 _deps/asio-src/asio/include/asio/execution/invocable_archetype.hpp:
@@ -1208,6 +1439,8 @@ _deps/asio-src/asio/include/asio/ip/address_v4_iterator.hpp:
 _deps/asio-src/asio/include/asio/execution/bad_executor.hpp:
 
 _deps/asio-src/asio/include/asio/execution/any_executor.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxint8intrin.h:
 
 _deps/asio-src/asio/include/asio/detail/eventfd_select_interrupter.hpp:
 
@@ -1239,13 +1472,19 @@ _deps/asio-src/asio/include/asio/detail/socket_types.hpp:
 
 /usr/include/c++/13/bits/basic_string.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/fxsrintrin.h:
+
 _deps/asio-src/asio/include/asio/detail/socket_holder.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/serializeintrin.h:
 
 _deps/asio-src/asio/include/asio/basic_stream_socket.hpp:
 
 _deps/asio-src/asio/include/asio/detail/posix_global.hpp:
 
 _deps/asio-src/asio/include/asio/detail/signal_op.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/smmintrin.h:
 
 _deps/asio-src/asio/include/asio/ip/network_v6.hpp:
 
@@ -1333,6 +1572,8 @@ _deps/asio-src/asio/include/asio/associator.hpp:
 
 _deps/asio-src/asio/include/asio/impl/executor.hpp:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h:
+
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
 
 /usr/include/c++/13/bits/ostream.tcc:
@@ -1348,6 +1589,8 @@ _deps/asio-src/asio/include/asio/detail/operation.hpp:
 _deps/asio-src/asio/include/asio/ip/address_v4_range.hpp:
 
 _deps/asio-src/asio/include/asio/detail/op_queue.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/wbnoinvdintrin.h:
 
 _deps/asio-src/asio/include/asio/detail/null_event.hpp:
 
@@ -1407,6 +1650,8 @@ _deps/asio-src/asio/include/asio/basic_socket_streambuf.hpp:
 
 _deps/asio-src/asio/include/asio/detached.hpp:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bwintrin.h:
+
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 _deps/asio-src/asio/include/asio/detail/impl/null_event.ipp:
@@ -1443,6 +1688,10 @@ _deps/asio-src/asio/include/asio/basic_writable_pipe.hpp:
 
 _deps/asio-src/asio/include/asio/detail/conditionally_enabled_event.hpp:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clflushoptintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h:
+
 _deps/asio-src/asio/include/asio/error_code.hpp:
 
 _deps/asio-src/asio/include/asio/ip/detail/socket_option.hpp:
@@ -1450,6 +1699,8 @@ _deps/asio-src/asio/include/asio/ip/detail/socket_option.hpp:
 _deps/asio-src/asio/include/asio/detail/initiate_post.hpp:
 
 _deps/asio-src/asio/include/asio/detail/array_fwd.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16vlintrin.h:
 
 _deps/asio-src/asio/include/asio/detail/date_time_fwd.hpp:
 
@@ -1487,6 +1738,8 @@ _deps/asio-src/asio/include/asio/detail/cstdint.hpp:
 
 /usr/include/c++/13/bits/stl_iterator_base_types.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512pfintrin.h:
+
 _deps/asio-src/asio/include/asio/any_completion_executor.hpp:
 
 _deps/asio-src/asio/include/asio/detail/reactive_socket_recvmsg_op.hpp:
@@ -1520,6 +1773,8 @@ _deps/asio-src/asio/include/asio/generic/detail/impl/endpoint.ipp:
 _deps/asio-src/asio/include/asio/buffered_write_stream_fwd.hpp:
 
 _deps/asio-src/asio/include/asio/detail/descriptor_ops.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/lwpintrin.h:
 
 _deps/asio-src/asio/include/asio/traits/static_require.hpp:
 
@@ -1569,6 +1824,8 @@ _deps/asio-src/asio/include/asio/awaitable.hpp:
 
 /usr/include/alloca.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h:
+
 _deps/asio-src/asio/include/asio/detail/io_control.hpp:
 
 _deps/asio-src/asio/include/asio/detail/base_from_cancellation_state.hpp:
@@ -1582,6 +1839,10 @@ _deps/asio-src/asio/include/asio/socket_base.hpp:
 _deps/asio-src/asio/include/asio/detail/reactive_socket_connect_op.hpp:
 
 _deps/asio-src/asio/include/asio/basic_random_access_file.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnnivlintrin.h:
 
 /usr/include/c++/13/bits/vector.tcc:
 
@@ -1598,6 +1859,8 @@ _deps/asio-src/asio/include/asio/cancellation_type.hpp:
 _deps/asio-src/asio/include/asio/as_tuple.hpp:
 
 _deps/asio-src/asio/include/asio/impl/executor.ipp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxcomplexintrin.h:
 
 _deps/asio-src/asio/include/asio/is_contiguous_iterator.hpp:
 
@@ -1630,6 +1893,8 @@ _deps/asio-src/asio/include/asio/local/connect_pair.hpp:
 _deps/asio-src/asio/include/asio/async_result.hpp:
 
 /usr/include/assert.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/cldemoteintrin.h:
 
 _deps/asio-src/asio/include/asio/basic_socket_acceptor.hpp:
 
@@ -1670,6 +1935,8 @@ _deps/asio-src/asio/include/asio/ip/basic_resolver_iterator.hpp:
 /usr/include/x86_64-linux-gnu/bits/sigstksz.h:
 
 _deps/asio-src/asio/include/asio/detail/socket_ops.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/lzcntintrin.h:
 
 _deps/asio-src/asio/include/asio/detail/posix_event.hpp:
 
@@ -1720,6 +1987,8 @@ _deps/asio-src/asio/include/asio/executor.hpp:
 _deps/asio-src/asio/include/asio/detail/reactive_socket_service_base.hpp:
 
 _deps/asio-src/asio/include/asio/ip/impl/address_v4.ipp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16intrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/termios-baud.h:
 
@@ -1803,6 +2072,8 @@ _deps/asio-src/asio/include/asio/detail/strand_service.hpp:
 
 _deps/asio-src/asio/include/asio/detail/functional.hpp:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmaintrin.h:
+
 _deps/asio-src/asio/include/asio/generic/detail/endpoint.hpp:
 
 _deps/asio-src/asio/include/asio/detail/scheduler_operation.hpp:
@@ -1812,6 +2083,8 @@ _deps/asio-src/asio/include/asio/detail/scheduler_operation.hpp:
 _deps/asio-src/asio/include/asio/buffer_registration.hpp:
 
 _deps/asio-src/asio/include/asio/impl/cancellation_signal.ipp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/enqcmdintrin.h:
 
 _deps/asio-src/asio/include/asio/detail/array.hpp:
 
@@ -1857,6 +2130,8 @@ _deps/asio-src/asio/include/asio/detail/executor_op.hpp:
 
 /usr/include/c++/13/bits/enable_special_members.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2vlintrin.h:
+
 _deps/asio-src/asio/include/asio/detail/timer_scheduler.hpp:
 
 _deps/asio-src/asio/include/asio/detail/service_registry.hpp:
@@ -1870,6 +2145,8 @@ _deps/asio-src/asio/include/asio/execution/allocator.hpp:
 _deps/asio-src/asio/include/asio/detail/handler_work.hpp:
 
 _deps/asio-src/asio/include/asio/detail/impl/epoll_reactor.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/tsxldtrkintrin.h:
 
 _deps/asio-src/asio/include/asio/traits/prefer_free.hpp:
 
@@ -1966,6 +2243,8 @@ _deps/asio-src/asio/include/asio/impl/redirect_error.hpp:
 _deps/asio-src/asio/include/asio/impl/thread_pool.hpp:
 
 /usr/include/c++/13/bits/stream_iterator.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitxintrin.h:
 
 _deps/asio-src/asio/include/asio/detail/winsock_init.hpp:
 
@@ -2295,6 +2574,8 @@ _deps/asio-src/asio/include/asio/buffered_stream_fwd.hpp:
 
 /usr/include/asm-generic/socket.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h:
+
 _deps/asio-src/asio/include/asio/detail/consuming_buffers.hpp:
 
 _deps/asio-src/asio/include/asio/posix/descriptor.hpp:
@@ -2310,6 +2591,8 @@ _deps/asio-src/asio/include/asio/posix/descriptor.hpp:
 /usr/include/c++/13/bits/atomic_futex.h:
 
 /usr/include/c++/13/bits/basic_ios.tcc:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/rdseedintrin.h:
 
 _deps/asio-src/asio/include/asio/detail/chrono.hpp:
 
@@ -2348,6 +2631,8 @@ _deps/asio-src/asio/include/asio/high_resolution_timer.hpp:
 /usr/include/c++/13/bits/locale_facets.tcc:
 
 /usr/include/c++/13/bits/localefwd.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/f16cintrin.h:
 
 /usr/include/c++/13/bits/memoryfwd.h:
 

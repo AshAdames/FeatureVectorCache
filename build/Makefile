@@ -237,6 +237,19 @@ kv_tests/fast:
 .PHONY : kv_tests/fast
 
 #=============================================================================
+# Target rules for targets named kv_tests_128
+
+# Build rule for target.
+kv_tests_128: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kv_tests_128
+.PHONY : kv_tests_128
+
+# fast build rule for target.
+kv_tests_128/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/kv_tests_128.dir/build.make tests/CMakeFiles/kv_tests_128.dir/build
+.PHONY : kv_tests_128/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -405,6 +418,7 @@ help:
 	@echo "... kv_lib"
 	@echo "... kv_server"
 	@echo "... kv_tests"
+	@echo "... kv_tests_128"
 	@echo "... network"
 	@echo "... benchmarks/bench_feat_client.o"
 	@echo "... benchmarks/bench_feat_client.i"
