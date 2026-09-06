@@ -595,7 +595,7 @@ int main(int argc, char** argv) {
     // --------------------------------------------------------
 
     std::cout
-        << "=== KV Server Benchmark ===\n";
+        << "=== KV_OPT Server Benchmark: Capcity:10000 ===\n";
 
     std::cout
         << "host:port         = "

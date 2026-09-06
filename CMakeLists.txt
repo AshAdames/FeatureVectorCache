@@ -23,6 +23,8 @@ add_library(kv_lib
     kv_opt.cpp
 )
 
+target_compile_options(kv_lib PRIVATE -mavx2 -mfma)
+
 target_include_directories(kv_lib
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}

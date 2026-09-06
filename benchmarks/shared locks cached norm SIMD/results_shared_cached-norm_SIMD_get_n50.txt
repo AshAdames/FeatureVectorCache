@@ -1,0 +1,17 @@
+=== KV_OPT Server Benchmark: Capcity:10000 ===
+host:port         = 127.0.0.1:8080
+connections       = 50
+ops/connection    = 1000 (+50 warmup, untimed)
+workload          = get
+----------------------------
+
+=== Results ===
+total ops completed : 50000
+errors               : 0
+wall time (s)        : 1.1854
+throughput (ops/sec) : 42179.8
+p50 latency (us)     : 805.85
+p95 latency (us)     : 2567.61
+p99 latency (us)     : 5584.95
+p999 latency (us)    : 11471.26
+max latency (us)     : 16750.07
