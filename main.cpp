@@ -16,16 +16,30 @@ void do_run(io_context &io){
 
 int main(int argc, char** argv){ 
     int threadCount = 5; //default
+    int capacity = 10000; //default
+    int vecDim = 4; 
     if(argc > 1 ){
         threadCount = std::stoi(argv[1]);
         if(threadCount < 1){
             std::cerr <<"thread count must be >= 1 \n";
             return 1;
         }
+        capacity = std::stoi(argv[2]);
+        if(capacity < 1){
+            std::cerr <<"capacity must be >= 1 \n";
+            return 1;
+        }
+        vecDim = std::stoi(argv[3]);
+        if(vecDim < 1){
+            std::cerr <<"capacity must be >= 1 \n";
+            return 1;
+        }
     }
+
+    std:: cout<<"===== KV SERVER: Cap:" << capacity << " ThreadCount: " << threadCount << "Vector Dim: " << vecDim << "\n";
     //accept 2nd arg? 
     io_context io;
-    KV_OPT key_store(100,20, 4);
+    KV_OPT key_store(capacity,20, vecDim);
     Server server(io, 8080, key_store);
 
     std::vector<std::thread> threads;

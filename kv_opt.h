@@ -10,8 +10,7 @@
 #include <cmath>
 #include <algorithm>
 #include <optional>
-
-
+#include <immintrin.h>
 class KV_OPT{ 
 
     public:
@@ -32,12 +31,13 @@ class KV_OPT{
             int key;
             int prev = -1; 
             int next = -1; 
+            float norm = 0.0f;
             std::chrono::steady_clock::time_point  expiration;
         };
 
         //hashmap + list for O(1) lookup + O(1) LRU replacement
         //cache =which slot, arena = data in that slot
-        std::unordered_map<int, int> cache; //k: key | val: clot into pool/arena
+        std::unordered_map<int, int> cache; //k: key | val: slot into pool/arena
         std::vector<Node> pool; // stores nodes 
         std::vector<float> arena; // continguous memory of dim * cap with only the raw float data 
             //arena provides cache locality and use for SIMD 
@@ -49,8 +49,9 @@ class KV_OPT{
         //helper functions for adding/removing to linked list
         void unlink(int i);
         void push_front(int i);
-        std::vector<int> freeSlots;
+        std::vector<int> free_slots;
         std::chrono::seconds TTL;
         mutable std::mutex mtx;
+        mutable std::shared_mutex shd_mtx;
 
 };

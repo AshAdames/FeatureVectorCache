@@ -1,0 +1,9 @@
+/.vscode
+/.venv
+/archived_kv
+/inprogress_docs
+/build
+benchmark_gen.py
+
+
+# git rm -r --cached .

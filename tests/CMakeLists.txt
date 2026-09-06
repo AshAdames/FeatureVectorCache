@@ -9,5 +9,8 @@ FetchContent_MakeAvailable(googletest)
 add_executable(kv_tests kv_test.cpp)
 target_link_libraries(kv_tests PRIVATE kv_lib gtest gtest_main)
 
+add_executable(kv_tests_128 kv_test_128.cpp)
+target_link_libraries(kv_tests_128 PRIVATE kv_lib gtest gtest_main)
+
 include(GoogleTest)
 gtest_discover_tests(kv_tests)
